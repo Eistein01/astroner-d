@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- Metadados básicos e responsividade (Mobile-First) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Astroner.d: portal de astronomia, ciência cidadã, caça a asteroides, missões espaciais e astrofotografia.">
+  <title>Astroner.d | Explorando o Cosmos</title>
+
+  <!-- Fontes: Orbitron para títulos, Inter para texto corrido -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fundo de estrelas animado (preenchido pelo script.js) -->
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <!-- ============ CABEÇALHO E NAVEGAÇÃO ============ -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#inicio" class="logo" aria-label="Astroner.d - início">
+        Astroner<span class="logo-dot">.</span>d
+      </a>
+
+      <!-- Botão hambúrguer para mobile -->
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="menu" class="main-nav">
+        <a href="#caca-asteroides">Caça a Asteroides</a>
+        <a href="#cosmos">Tudo sobre o Cosmos</a>
+        <a href="#ferramentas">Ferramentas</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato" class="btn-nav">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section id="inicio" class="hero">
+      <div class="container hero-content">
+        <p class="eyebrow">Ciência cidadã · Astronomia · Exploração</p>
+        <h1>Explorando <span class="gradient-text">o cosmos</span>, um céu de cada vez.</h1>
+        <p class="hero-text">
+          Do sistema solar às galáxias distantes: notícias de missões espaciais,
+          guias de observação e um espaço dedicado à caça de asteroides feita por amadores.
+        </p>
+        <div class="hero-actions">
+          <a href="#caca-asteroides" class="btn btn-primary">Começar a caçar asteroides</a>
+          <a href="#cosmos" class="btn btn-ghost">Explorar o cosmos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CIÊNCIA CIDADÃ & CAÇA A ASTEROIDES ============ -->
+    <section id="caca-asteroides" class="section">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Ciência Cidadã</p>
+          <h2>Caça a Asteroides: você também pode descobrir</h2>
+          <p class="section-lead">
+            Milhares de imagens astronômicas são capturadas todas as noites. Dentro delas,
+            objetos em movimento esperam ser identificados. Amadores como você já ajudaram
+            a descobrir asteroides e a rastrear NEOs (objetos próximos da Terra).
+          </p>
+        </header>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <span class="card-icon" aria-hidden="true">🔭</span>
+            <h3>1. Capture</h3>
+            <p>Registre sequências de imagens do mesmo campo estelar com tempo de exposição e calibração adequados.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true">🧮</span>
+            <h3>2. Analise</h3>
+            <p>Use softwares de astrometria, como o Astrometrica, para medir posições e comparar o movimento dos objetos.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon" aria-hidden="true">🛰️</span>
+            <h3>3. Reporte</h3>
+            <p>Envie as observações ao Minor Planet Center (MPC) para confirmação e catalogação oficial.</p>
+          </article>
+        </div>
+
+        <!-- Relato real (conteúdo editável) -->
+        <div class="testimonial card card-highlight">
+          <p class="quote">
+            "Cada noite de campanha é uma corrida contra o tempo. Quando um ponto se move
+            entre os quadros e a astrometria confirma uma órbita nova, a sensação é indescritível."
+          </p>
+          <p class="quote-author">Felipe · Astrônomo amador e caçador de asteroides</p>
+        </div>
+
+        <!-- Links úteis -->
+        <h3 class="subheading">Projetos e links úteis</h3>
+        <ul class="link-list">
+          <li><a href="https://minorplanetcenter.net/" target="_blank" rel="noopener">Minor Planet Center (MPC)</a></li>
+          <li><a href="https://www.iasc.org/" target="_blank" rel="noopener">International Asteroid Search Campaign (IASC)</a></li>
+          <li><a href="https://cneos.jpl.nasa.gov/" target="_blank" rel="noopener">NASA CNEOS: objetos próximos da Terra</a></li>
+          <li><a href="https://www.zooniverse.org/" target="_blank" rel="noopener">Zooniverse: projetos de ciência cidadã</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ TUDO SOBRE O COSMOS ============ -->
+    <section id="cosmos" class="section section-alt">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Hub de conteúdo</p>
+          <h2>Tudo sobre o Cosmos</h2>
+          <p class="section-lead">Escolha uma categoria e mergulhe no assunto.</p>
+        </header>
+
+        <div class="grid grid-4">
+          <a href="#" class="category-card" data-category="sistema-solar">
+            <span class="category-icon" aria-hidden="true">🪐</span>
+            <h3>Sistema Solar</h3>
+            <p>Planetas, luas, asteroides e cometas.</p>
+          </a>
+          <a href="#" class="category-card" data-category="espaco-profundo">
+            <span class="category-icon" aria-hidden="true">🌌</span>
+            <h3>Espaço Profundo</h3>
+            <p>Nebulosas, galáxias e buracos negros.</p>
+          </a>
+          <a href="#" class="category-card" data-category="missoes">
+            <span class="category-icon" aria-hidden="true">🚀</span>
+            <h3>Missões Espaciais</h3>
+            <p>NASA, ESA, JAXA e as missões em curso.</p>
+          </a>
+          <a href="#" class="category-card" data-category="observacao">
+            <span class="category-icon" aria-hidden="true">✨</span>
+            <h3>Guia de Observação</h3>
+            <p>Primeiros passos para quem olha para o céu.</p>
+          </a>
+        </div>
+
+        <!-- Área onde o script.js exibe o conteúdo da categoria selecionada -->
+        <div id="category-output" class="category-output" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ============ FERRAMENTAS INTERATIVAS ============ -->
+    <section id="ferramentas" class="section">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Ferramentas</p>
+          <h2>Ferramentas interativas</h2>
+        </header>
+
+        <div class="grid grid-2">
+          <!-- Calendário de eventos -->
+          <div class="card tool-card">
+            <h3>📅 Calendário do céu</h3>
+            <p class="tool-desc">Veja a fase atual da Lua e os próximos eventos astronômicos.</p>
+            <div class="moon-display">
+              <div id="moon-icon" class="moon-icon" aria-hidden="true">🌑</div>
+              <div>
+                <p id="moon-phase-name" class="moon-name">—</p>
+                <p id="moon-illumination" class="muted">—</p>
+              </div>
+            </div>
+            <ul id="events-list" class="events-list"></ul>
+          </div>
+
+          <!-- Calculadora de distâncias e magnitudes -->
+          <div class="card tool-card">
+            <h3>🧮 Calculadora astronômica</h3>
+            <p class="tool-desc">Converta unidades e calcule a diferença de magnitude entre dois objetos.</p>
+
+            <form id="calc-form" class="calc-form" novalidate>
+              <fieldset>
+                <legend>Conversão de distância</legend>
+                <label>
+                  Valor
+                  <input type="number" id="dist-value" step="any" value="1" required>
+                </label>
+                <label>
+                  De
+                  <select id="dist-from">
+                    <option value="au">Unidades astronômicas (UA)</option>
+                    <option value="ly">Anos-luz (al)</option>
+                    <option value="pc">Parsecs (pc)</option>
+                    <option value="km">Quilômetros (km)</option>
+                  </select>
+                </label>
+                <label>
+                  Para
+                  <select id="dist-to">
+                    <option value="km">Quilômetros (km)</option>
+                    <option value="au">Unidades astronômicas (UA)</option>
+                    <option value="ly" selected>Anos-luz (al)</option>
+                    <option value="pc">Parsecs (pc)</option>
+                  </select>
+                </label>
+                <output id="dist-result" class="result" aria-live="polite"></output>
+              </fieldset>
+
+              <fieldset>
+                <legend>Diferença de magnitude</legend>
+                <label>
+                  Magnitude A
+                  <input type="number" id="mag-a" step="0.01" value="5.0">
+                </label>
+                <label>
+                  Magnitude B
+                  <input type="number" id="mag-b" step="0.01" value="8.0">
+                </label>
+                <output id="mag-result" class="result" aria-live="polite"></output>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE / CRÉDITOS ============ -->
+    <section id="sobre" class="section section-alt">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">Sobre o projeto</p>
+          <h2>Um portal feito por quem olha para o céu</h2>
+          <p>
+            O Astroner.d nasceu da paixão prática pela astronomia amadora e pela ciência cidadã.
+            Aqui você encontra conteúdo organizado, notícias de missões espaciais e o relato direto
+            de quem participa de campanhas de detecção de asteroides.
+          </p>
+        </div>
+        <aside class="card creator-card">
+          <p class="creator-name">Felipe Cruz</p>
+          <p class="muted">Astrônomo amador · Caçador de NEOs · Criador do Astroner.d</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section id="contato" class="section">
+      <div class="container contact-wrap">
+        <div>
+          <p class="eyebrow">Contato</p>
+          <h2>Fale com a gente</h2>
+          <p>Tem uma observação, uma dúvida ou quer participar de uma campanha? Envie uma mensagem.</p>
+          <a href="mailto:fdacruzchagas@gmail.com" class="btn btn-primary">fdacruzchagas@gmail.com</a>
+        </div>
+
+        <!-- O formulário abre o cliente de e-mail com os dados preenchidos -->
+        <form id="contact-form" class="card contact-form">
+          <label>
+            Nome
+            <input type="text" name="nome" required autocomplete="name">
+          </label>
+          <label>
+            E-mail
+            <input type="email" name="email" required autocomplete="email">
+          </label>
+          <label>
+            Mensagem
+            <textarea name="mensagem" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+          <p id="form-feedback" class="muted" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="logo">Astroner<span class="logo-dot">.</span>d</p>
+        <p class="muted">Explorando o cosmos, com ciência e curiosidade.</p>
+      </div>
+
+      <nav aria-label="Navegação rápida">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#caca-asteroides">Caça a Asteroides</a></li>
+          <li><a href="#cosmos">Tudo sobre o Cosmos</a></li>
+          <li><a href="#ferramentas">Ferramentas</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="mailto:fdacruzchagas@gmail.com">fdacruzchagas@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p class="muted">© <span id="year"></span> Astroner.d · Criado por Felipe Cruz</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
